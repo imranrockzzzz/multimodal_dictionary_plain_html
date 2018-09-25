@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>CSE-499</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.4.1/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyBkbYUhVoEmU7xNjhtja1DT9kHgipanCxQ",
+        authDomain: "csv-db-96bdc.firebaseapp.com",
+        databaseURL: "https://csv-db-96bdc.firebaseio.com",
+        projectId: "csv-db-96bdc",
+        storageBucket: "csv-db-96bdc.appspot.com",
+        messagingSenderId: "858722937377"
+      };
+      firebase.initializeApp(config);
+    </script>
+  <script src="js/word.js"></script>
+ </head>
+ <body>
+    <div class="main-content">
+        <div class="box width100">
+            <input type="text" class="inputSearch" placeholder="search words">
+        </div>
+        <div class="table">
+            <table>
+                <thead>
+                    <tr>
+                    <th>EXPRESSIONS</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+                
+            </table>
+        </div>
+        
+
+    </div>
+    <div class="main-content-box">
+        <div class="width100" style="position: relative;">
+            <button class="btn btn-back">Back To List</button>
+            <div class="width60auto">
+                <p class="width100" id="lblWord"></p>
+                <hr>
+                <div class="width100 imgSrcDiv">
+                    <img src="" class="imgSrc width100 height200">
+                </div>
+                <div class="width100 gifSrcDiv">
+                    <img src="" class="gifSrc width100 height200">
+                </div>
+                <div class="width100">
+                    <div class="width40">Synonym : </div>
+                    <div class="width60" id="lblSynonym"></div>
+                </div>
+                <div class="width100">
+                    <div class="width40">Meaning : </div>
+                    <div class="width60" id="lblMeaning"></div>
+                </div>
+                <div class="width100">
+                    <div class="width40">Example : </div>
+                    <div class="width60" id="lblExample"></div>
+                </div>
+                <div class="width100">
+                    <iframe id="lblYoutubeLink" src="" height="300" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="overlay-bg">
+    </div>
+    <div class="overlay-content popup">
+        <button class="close-btn">Close</button>
+    </div>
+ </body>
+</html>

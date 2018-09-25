@@ -1,0 +1,255 @@
+* {
+	margin: 0;
+	padding: 0;
+	-moz-box-sizing: border-box; 
+	-webkit-box-sizing: border-box; 
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Helvetica Neue','Helvetica', Arial, sans-serif;
+	color: black;
+}
+
+.main-content {
+	height: 800px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.overlay-bg {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height:100%;
+	width: 100%;
+	cursor: pointer;
+	z-index: 1000; /* high z-index */
+	background: #000; /* fallback */
+	background: rgba(0,0,0,0.75);
+}
+.overlay-content {
+	display: none;
+	background: #fff;
+	padding: 1%;
+	width: 40%;
+	position: absolute;
+	top: 15%;
+	left: 50%;
+	margin: 0 0 0 -20%; /* add negative left margin for half the width to center the div */
+	cursor: default;
+	z-index: 10001;
+	border-radius: 4px;
+	box-shadow: 0 0 5px rgba(0,0,0,0.9);
+}
+
+.close-btn {
+	cursor: pointer;
+	border: 1px solid #333;
+	padding: 2% 5%;
+	background: #a9e7f9; /* fallback */
+	background: -moz-linear-gradient(top,  #a9e7f9 0%, #77d3ef 4%, #05abe0 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#a9e7f9), color-stop(4%,#77d3ef), color-stop(100%,#05abe0));
+	background: -webkit-linear-gradient(top,  #a9e7f9 0%,#77d3ef 4%,#05abe0 100%);
+	background: -o-linear-gradient(top,  #a9e7f9 0%,#77d3ef 4%,#05abe0 100%);
+	background: -ms-linear-gradient(top,  #a9e7f9 0%,#77d3ef 4%,#05abe0 100%);
+	background: linear-gradient(to bottom,  #a9e7f9 0%,#77d3ef 4%,#05abe0 100%);
+	border-radius: 4px;
+	box-shadow: 0 0 4px rgba(0,0,0,0.3);
+}
+.close-btn:hover {
+	background: #05abe0;
+}
+
+
+table {
+	width: 100%;
+	border-collapse: collapse;	
+}
+table tbody tr td{
+	color: white;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+thead {
+	font-size: 0.8rem;
+	text-transform: uppercase;
+	background: #f1f1f1;
+}
+
+tr {
+	border-top: 1px solid #e6e6e6;
+}
+
+
+
+td {
+	font-weight: 100;
+}
+
+th, td {
+	padding: 1.25rem 2rem;
+	text-align: left;
+}
+.box{
+	width: 100%;
+	margin: 15px 5px;
+}
+.inputSearch{
+	width: 100%;
+    padding: 15px 10px;
+    border-radius: 25px;
+    border: 1px solid #7d7a7a;
+}
+.inputSearch:focus{
+	outline: 0px;
+}
+.width100{
+	display: inline-block;
+	float: left;
+	width: 98%;
+	margin: 10px 5px;
+}
+.width40{
+	display: inline-block;
+	float: left;
+	width: 40%;
+}
+.width60{
+	display: inline-block;
+	float: left;
+	width: 60%;
+}
+.width20{
+	display: inline-block;
+	float: left;
+	width: 20%;
+}
+img{
+	width: 100%;
+}
+.gifSrcDiv{
+	margin-left: 20%;
+}
+a{
+	word-wrap: break-word;
+}
+.imgSrc,.gifSrc{
+	position: relative;
+	width: 80%;
+	height: 90%;
+	transition: transform .2s;
+}
+
+/* hover effect */
+.imgSrc:hover,.gifSrc:hover {
+	cursor: pointer;
+	-ms-transform: scale(1.5); /* IE 9 */
+    -webkit-transform: scale(1.5); /* Safari 3-8 */
+    transform: scale(1.5); 
+}
+
+/*  */
+
+#lblYoutubeLink{
+	width: 100%;
+}
+.height200{
+	height: 200px;
+	width: 100%;
+}
+.width60auto{
+	width: 60%;
+    margin: 0 auto;
+}
+.width50{
+	width: 49%;
+	display: inline-block;;
+	float: left;
+}
+.btn-back{
+	padding: 10px;
+    background: #7171f7;
+    border-radius: 5px;
+    border: 1px solid white;
+    color: white;
+    font-weight: bold;
+    position: absolute;
+    top: 5px;
+    right: 0;
+    cursor: pointer;
+}
+.imgHeight{
+	height: 200px;
+    width: 200px;
+    text-align: center;
+    margin: 0 auto;
+    justify-content: center;
+    margin: 0px 30% auto;
+}
+#lblWord{
+	font-size: 21px;
+    text-align: center;
+    font-weight: bold;
+}
+.table{
+	height: 100px;
+    overflow-y: auto;
+    width: 100%;
+}
+.show-popup:hover {
+    -ms-zoom: 2.0;
+    -webkit-zoom: 2.0;
+    zoom : 2.0;
+	cursor: pointer;	
+}
+table{
+	/* background-image: url(img/bg.jpg); */
+	background: black;
+    background-position: center;
+}
+
+@media screen and (min-width: 760px) {
+    .main-content {
+		width: 100%;
+		margin: 0 auto;
+	}
+	.width60auto{
+		width: 80%;
+	}
+	#lblWord{
+		text-align: left;
+	}
+}
+
+@media screen and (max-width: 480px) {
+    .main-content {
+		width: 100%;
+		margin: 0 auto;
+	}
+	.width60auto,.width40{
+		width: 90%;
+	}
+	.width60auto.lbl{
+		width: 60%;
+	}
+	.width20 {
+		width: 40%;
+	}
+	.width40.lbl{
+		width: 40%;
+	}
+	#lblWord{
+		text-align: left;
+	}
+}
+footer{
+	background: #e0e0e0;
+    padding: 10px 10px;
+    text-align: right;
+}
+.main-content-box{
+	display: inline-block;
+}
